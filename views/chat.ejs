@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Directory</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      color: black;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Book Directory</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Publication Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- books.forEach(book => { %>
+        <tr>
+          <td><%= book.title %></td>
+          <td><%= book.author %></td>
+          <td><%= book.genre %></td>
+          <td><%= book.publicationDate %></td>
+        </tr>
+      <%- }); %>
+    </tbody>
+  </table>
+</body>
+</html>
